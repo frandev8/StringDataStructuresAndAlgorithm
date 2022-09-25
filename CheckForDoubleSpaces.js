@@ -25,13 +25,13 @@ let isValidMessage = false;
 for(let i = 0; i < loopLimit; i++){
   if( message.slice(i,i+2)==="  "){
     isValidMessage = true
-    console.log("Yes, this message contains double space.");
+    // console.log("Yes, this message contains double space.");
     break;
   }
 }
 
 if(!isValidMessage){
-  console.log("No, this message is absolutely fine.");  
+  // console.log("No, this message is absolutely fine.");  
 }
 
 
@@ -42,7 +42,7 @@ if(!isValidMessage){
 
 // modern approach
 if(message.includes("  ")){
-  // console.log("Yes, this message contains double space.")
+  console.log("Yes, this message contains double space.")
 }else {
-  // console.log("No, this message is absolutely fine")
+  console.log("No, this message is absolutely fine")
 }

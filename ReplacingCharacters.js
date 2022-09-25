@@ -15,34 +15,45 @@
 let message = "I learned how to solve a 3x3 rubik's cube correctly on youtube yesterday in the beginner's way.";
 
 
-let limitTracker = message.length;
-
 // first classical approach
-for(let i = 0; i < limitTracker; i++){
-  if(message.slice(i,i+3)==="3x3"){
-    message = message.slice(0,i) + "three by three" + message.slice(i+3);
-    break;
+function ReplaceCharacters1 (message) {
+
+  let limitTracker = message.length;
+
+  for(let i = 0; i < limitTracker; i++){
+    if(message.slice(i,i+3)==="3x3"){
+      message = message.slice(0,i) + "three by three" + message.slice(i+3);
+      break;
+    }
+    
   }
-  
+
+  // return message
 }
-// console.log(message)  /* I learned how to solve a three by three rubik's cube correctly on youtube yesterday in the beginner's way.*/
 
 
 // enhance classical approach
-let matchStartingIndex = message.indexOf("3x3");
-if(matchStartingIndex !== -1){
-  message= message.slice(0,matchStartingIndex) + "three by three" + message.slice(matchStartingIndex,matchStartingIndex+3); 
-}
+function ReplaceCharacters2 (message) {
 
-// console.log(message); /* I learned how to solve a three by three rubik's cube correctly on youtube yesterday in the beginner's way.*/
+  let matchStartingIndex = message.indexOf("3x3");
+  
+  if(matchStartingIndex !== -1){
+    message= message.slice(0,matchStartingIndex) + "three by three" + message.slice(matchStartingIndex,matchStartingIndex+3); 
+  }
+  
+  // return message;
+}
 
 
 // modern and less work approach
-if(message.includes("3x3")){
-  message.replace("3x3", "three by three");
-}
+function ReplaceCharacters3 (message) {
 
-console.log(message); /* I learned how to solve three by three rubik's cube correctly on youtube yesterday in the beginner's way. */
+  if(message.includes("3x3")){
+  message.replace("3x3", "three by three");
+  }
+  
+  return message;
+}
 
 
 
