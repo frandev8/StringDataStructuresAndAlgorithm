@@ -3,6 +3,8 @@
 
 // Working with functions, toLowerCase method, loop limiter, object, array, for loops, if statement, Object.keys method, includes method, push method, string literal, join method
 
+
+
 let message = "The sunset sets at twelve o'clock,";
 
 // classical approach
